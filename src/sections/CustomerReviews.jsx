@@ -1,6 +1,6 @@
 import React from 'react'
 import ReviewCard from '../components/ReviewCard';
-
+import { reviews } from '../constants';
 const CustomerReviews = () => {
   return (
     <section className='max-container'>
@@ -10,7 +10,15 @@ const CustomerReviews = () => {
       <p className='info-text m-auto mt-4 max-w-lg text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti ab labore inventore eum! Tenetur provident perspiciatis adipisci eos, enim inventore ad alias rem soluta, autem doloremque, ullam repellendus commodi.</p>
       <div className='mt-24 flex flex-1  justify-evenly items-center max-lg:flex-col gap-14'>
         {reviews.map((re) => (
-          <ReviewCard /> ))}
+          <ReviewCard 
+          
+          key={re.customerName}
+          imgURL={re.imgURL}
+          customerName={re.customerName}
+          rating={re.rating}
+          feedback={re.feedback}
+          
+          /> ))}
       </div>
     </section>
   )
