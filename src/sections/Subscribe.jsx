@@ -1,9 +1,9 @@
 
 const Subscribe = () => {
   return (
-    <div>
+    <section className="max-container flex justify-between items-center max-lg:flex-col gap-10 " id="contact-us">
       
-    </div>
+    </section>
   )
 }
 
